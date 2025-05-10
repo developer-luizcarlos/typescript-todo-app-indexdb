@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+
 :root {
   --dark-gray: hsl(0, 0%, 19%);
   --gradient: linear-gradient(80deg, hsl(269, 72%, 71%), hsl(234, 84%, 81%));
@@ -24,10 +26,11 @@ html {
 }
 
 body {
+  background: var(--gradient);
   display: flex;
+  font-family: "Inconsolata", monospace;
   align-items: center;
   justify-content: center;
-  background: var(--gradient);
 }
 
 .todo-app {
