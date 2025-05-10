@@ -1,3 +1,11 @@
+:root {
+  --dark-gray: hsl(0, 0%, 19%);
+  --gradient: linear-gradient(80deg, hsl(269, 72%, 71%), hsl(234, 84%, 81%));
+  --smoke-white: hsl(0, 0%, 90%);
+  --violet: hsl(256, 38%, 54%);
+  --white: hsl(0, 0%, 100%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,4 +27,5 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--gradient);
 }
