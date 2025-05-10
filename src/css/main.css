@@ -32,6 +32,7 @@ body {
 }
 
 .todo-app {
+  position: relative;
   background-color: var(--white);
   border-radius: 5px;
   color: var(--dark-gray);
@@ -63,6 +64,12 @@ body {
   flex-direction: column;
   align-items: center;
   list-style: none;
+}
+
+.no-tasks-msg {
+  font-size: 1.7rem;
+  font-style: italic;
+  margin-bottom: 50px;
 }
 
 .list__item {
@@ -99,4 +106,22 @@ body {
 .list__checkbox--checked::after {
   content: "\2714";
   font-size: 3rem;
+}
+
+.btn {
+  position: absolute;
+  background-color: var(--violet);
+  border: none;
+  border-radius: 100%;
+  bottom: -30px;
+  color: var(--white);
+  cursor: pointer;
+  display: block;
+  height: 70px;
+  font-size: 5rem;
+  left: 50%;
+  margin: auto;
+  transform: translateX(-50%);
+  outline: none;
+  width: 70px;
 }
