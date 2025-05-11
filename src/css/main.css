@@ -66,10 +66,16 @@ body {
   list-style: none;
 }
 
-.no-tasks-msg {
+.add-task {
+  border: none;
+  border-bottom: 1px solid var(--smoke-white);
+  font-family: inherit;
   font-size: 1.7rem;
   font-style: italic;
   margin-bottom: 50px;
+  padding: 5px;
+  outline: none;
+  text-align: center;
 }
 
 .list__item {
