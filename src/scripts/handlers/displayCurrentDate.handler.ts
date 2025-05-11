@@ -1,5 +1,5 @@
 import { timeCurrentDate } from "../domElements.js";
-import { getCurrentDate } from "../helpers/getDate.js";
+import { getCurrentDate } from "../helpers/getDate.helper.js";
 
 export function displayCurrentDate() {
   if (timeCurrentDate) {
