@@ -59,5 +59,3 @@ function getWeekDay(date: Date) {
       return "Sunday";
   }
 }
-
-getCurrentDate();

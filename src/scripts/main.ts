@@ -2,7 +2,7 @@
 
 import { CreateTask } from "./classes/tasks.js";
 import { btnAddTask, inputAddTask } from "./domElements.js";
-import { displayCurrentDate } from "./handlers/displayCurrentDate.handler.js";
+import { displayCurrentDate } from "./handlers/index.js";
 import { request, startDatabase } from "./storage/database.storage.js";
 
 startDatabase();
