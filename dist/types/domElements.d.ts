@@ -1,4 +1,4 @@
-export declare const btnAddTask: Element | null;
-export declare const inputAddTask: Element | null;
-export declare const listTasks: Element | null;
-export declare const timeCurrentDate: Element | null;
+export declare const btnAddTask: HTMLButtonElement;
+export declare const inputAddTask: HTMLInputElement;
+export declare const listTasks: HTMLUListElement;
+export declare const timeCurrentDate: HTMLTimeElement;

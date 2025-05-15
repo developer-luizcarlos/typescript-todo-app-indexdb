@@ -1,17 +1,20 @@
 const dbName = "DataBase";
-const dbVersion = 1;
-export const request = indexedDB.open(dbName, dbVersion);
+export const request = indexedDB.open(dbName);
 export function startDatabase() {
     request.onupgradeneeded = (event) => {
         const db = event.target.result;
         if (!db.objectStoreNames.contains("Todo")) {
-            db.createObjectStore("Todo");
+            db.createObjectStore("Todo", { keyPath: "id", autoIncrement: true });
+            console.log("Object store has been created.");
+        }
+        else {
+            console.log(db.objectStoreNames.length);
         }
     };
     request.onerror = (event) => {
         console.error(event.type);
     };
     request.onsuccess = (event) => {
-        console.log(`Database was opened with success: ${event.type}`);
+        console.log(`Database was opened with success.`);
     };
 }
