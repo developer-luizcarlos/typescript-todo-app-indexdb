@@ -31,3 +31,26 @@ export class CreateTask implements Task {
     };
   }
 }
+
+export class GetTasks {
+  private db: IDBDatabase;
+
+  constructor(db: IDBDatabase) {
+    this.db = db;
+  }
+
+  tasks() {
+    return new Promise((resolve, reject) => {
+      const transaction = this.db.transaction("Todo", "readonly");
+      const store = transaction.objectStore("Todo");
+
+      const request = store.getAll();
+      request.onsuccess = () => {
+        resolve(Array.from(request.result));
+      };
+      request.onerror = () => {
+        reject(request.error);
+      };
+    });
+  }
+}

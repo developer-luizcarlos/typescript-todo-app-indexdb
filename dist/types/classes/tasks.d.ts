@@ -6,3 +6,8 @@ export declare class CreateTask implements Task {
     constructor(db: IDBDatabase, title: string);
     private createTask;
 }
+export declare class GetTasks {
+    private db;
+    constructor(db: IDBDatabase);
+    tasks(): Promise<unknown>;
+}

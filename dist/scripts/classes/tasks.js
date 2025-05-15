@@ -25,3 +25,22 @@ export class CreateTask {
         };
     }
 }
+export class GetTasks {
+    db;
+    constructor(db) {
+        this.db = db;
+    }
+    tasks() {
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction("Todo", "readonly");
+            const store = transaction.objectStore("Todo");
+            const request = store.getAll();
+            request.onsuccess = () => {
+                resolve(Array.from(request.result));
+            };
+            request.onerror = () => {
+                reject(request.error);
+            };
+        });
+    }
+}
