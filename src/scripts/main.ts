@@ -16,6 +16,8 @@ window.addEventListener("load", () => {
 if (btnAddTask && inputAddTask) {
   btnAddTask.addEventListener("click", () => {
     const taskTitle = inputAddTask.value;
+    inputAddTask.value = "";
+    inputAddTask.focus();
     new CreateTask(request.result, taskTitle);
     erasePreviousListItems();
     renderTasks();
