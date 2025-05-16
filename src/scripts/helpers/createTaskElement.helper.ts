@@ -1,4 +1,3 @@
-import { listTasks } from "../domElements.js";
 import { type Task } from "../types/task.types";
 
 export function createTaskElement(task: Task) {
@@ -16,5 +15,5 @@ export function createTaskElement(task: Task) {
   );
   listItem.appendChild(listCheckbox);
 
-  listTasks.appendChild(listItem);
+  return listItem;
 }

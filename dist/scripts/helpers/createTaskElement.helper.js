@@ -1,4 +1,3 @@
-import { listTasks } from "../domElements.js";
 export function createTaskElement(task) {
     const listItem = document.createElement("li");
     listItem.classList.add("list__item");
@@ -9,5 +8,5 @@ export function createTaskElement(task) {
     const listCheckbox = document.createElement("span");
     listCheckbox.classList.add(task.isCompleted ? "list__checkbox--checked" : "list__checkbox");
     listItem.appendChild(listCheckbox);
-    listTasks.appendChild(listItem);
+    return listItem;
 }
