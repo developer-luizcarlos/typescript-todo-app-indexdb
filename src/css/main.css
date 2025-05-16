@@ -70,12 +70,19 @@ body {
 .add-task {
   border: none;
   border-bottom: 1px solid var(--smoke-white);
+  display: block;
   font-family: inherit;
   font-size: 1.7rem;
   font-style: italic;
+  margin: auto;
   padding: 5px;
   outline: none;
   text-align: center;
+  transition: all 0.2s ease-in;
+}
+
+.add-task:focus {
+  border-color: rgb(0, 81, 255);
 }
 
 .list__item {
