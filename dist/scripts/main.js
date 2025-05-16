@@ -6,6 +6,9 @@ import { erasePreviousListItems } from "./helpers/erasePreviousListItems.helper.
 import { request, startDatabase } from "./storage/database.storage.js";
 startDatabase();
 window.addEventListener("load", () => {
+    if (inputAddTask) {
+        inputAddTask.focus();
+    }
     displayCurrentDate();
     renderTasks();
 });
