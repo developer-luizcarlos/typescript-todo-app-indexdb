@@ -12,5 +12,6 @@ if (btnAddTask && inputAddTask) {
     btnAddTask.addEventListener("click", () => {
         const taskTitle = inputAddTask.value;
         new CreateTask(request.result, taskTitle);
+        renderTasks();
     });
 }
